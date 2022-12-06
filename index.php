@@ -108,8 +108,8 @@ if ((isset($_SESSION['loginEmail'])) && (isset($_SESSION['loginSenha']))) {
             $resultLogin->bindParam(':senhaLogin', $senha, PDO::PARAM_STR);
             $resultLogin->execute();
 
-            $obj = $resultLogin->FETCH(PDO::FETCH_OBJ);
-            $id = $obj->id_user;
+            // $obj = $resultLogin->FETCH(PDO::FETCH_OBJ);
+            // $id = $obj->id_user;
 
             $verificar = $resultLogin->rowCount();
             if ($verificar > 0) {
